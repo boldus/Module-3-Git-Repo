@@ -27,9 +27,9 @@ while(ConfirmLength <=7 || ConfirmLength >=129) {
   var ConfirmLength =(prompt("How many characters would you like to use for your password?"));
 }
 var ConfirmUpperCaseletters = confirm("Click OK if you'd like your Password to include at least one Upper Case Letter");
-var ConfirmLowerCaseletters =confirm("Click OK if you'd like your Password to include at least one Lower Case Letter");
-var ConfirmNumbers =confirm("Click Ok if you'd like your Password to include at least one Number");
-var ConfirmSpecialChars =confirm("Click Ok if you'd like your Password to include at least one Special Character")
+var ConfirmLowerCaseletters = confirm("Click OK if you'd like your Password to include at least one Lower Case Letter");
+var ConfirmNumbers = confirm("Click Ok if you'd like your Password to include at least one Number");
+var ConfirmSpecialChars = confirm("Click Ok if you'd like your Password to include at least one Special Character")
 
 while(ConfirmUpperCaseletters === false && ConfirmLowerCaseletters === false && ConfirmSpecialChars === false && ConfirmNumbers === false){
 alert("Security is key, please select at LEAST one parameter");
@@ -38,7 +38,7 @@ var ConfirmLowerCaseletters =confirm("Click OK if you'd like your Password to in
 var ConfirmNumbers =confirm("Click Ok if you'd like your Password to include at least one Number");
 var ConfirmSpecialChars =confirm("Click Ok if you'd like your Password to include at least one Special Character");
 }
-var passwordText =[]
+var passwordText = []
 
 if (ConfirmUpperCaseletters) {
   passwordText = passwordText.concat(UpperCaseletters)
@@ -53,10 +53,11 @@ if (ConfirmSpecialChars) {
   passwordText = passwordText.concat(SpecialChars)
 }
 console.log(passwordText)
+
 var randomPassword=""
 
-for(var i =0; i < ConfirmLength; i++) {
-  randomPassword = randomPassword + passwordText[Math.floor(Math.random() * passwordText.lenth)];
+for (var i =0; i < ConfirmLength; i++) {
+  randomPassword = randomPassword + passwordText[Math.floor(Math.random() * passwordText.length)];
 console.log(randomPassword)
 }
  return randomPassword;
